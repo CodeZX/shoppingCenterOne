@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  ShoppingCenterOne
+
+  Created by 周鑫 on 2018/11/2.
+  Copyright © 2018年 TJ. All rights reserved.
+*/
+
+"nav-login" = "登录";
+// tabbar
+"Tabar_Home_Title" = "首页";
+"Tabar_shoppingCart_Title" = "购物车";
+"Tabar_Mine_Title" = "我的";
+
+
+// 首页分类
+"SnackFood" = "休闲零食";
+"driedFruit" = "炒货干果";
+"biscuit" = "饼干糕点";
+"import" = "进口食品";
+
+
+// controller title
+"goodsdetailsController_title" = "商品详情";
+"confirmOrderController_title" = "确认订单";
+"selectAddressController_title" = "选择地址";
+"manageController_title" = "管理地址";
+"editController_title" = "编辑地址";
+"addController_title" = "添加地址";
+
+
+// 个人中心
+"message" = "个人消息";
+"myOrder" = "我的订单";
+"myCollect" = "我的收藏";
+"about" = "关于我们";
+"language" = "语言";
+"setting" = "设置";
+"intimacy" = "隐私";
+
+
+"pop" = "热卖商品";
+"commend" = "精选推荐";
+"more" = "更多";
+"phone" = "电话";
+"shoppingCart" = "购物车";
+"accedeToshoppingCart" = "加入购物车";
+"buy" = "立即购买";
+"payment" = "立即支付";
+"addUp" = "合计";
+"manage" = "管理";
+"checkAll" = "全选";
+"settleAccounts" = "结算";
+
+
+"select" = "选择";
+"select_size" = "请选择 尺寸";
+"parameter" = "参数";
+"parameterSelect" = "风格 品牌";
+"addAddressButtonTitle" = "添加收货地址";
+
+
+
+
+
+

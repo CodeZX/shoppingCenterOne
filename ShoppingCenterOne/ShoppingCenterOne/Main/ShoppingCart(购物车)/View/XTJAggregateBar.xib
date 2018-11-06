@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XTJAggregateBar">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5h-al-Ue4">
+                    <rect key="frame" x="20" y="14.5" width="70" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="7dE-Kq-JA9"/>
+                        <constraint firstAttribute="width" constant="70" id="aaD-rv-Gf6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="全选" image="icon_unselect.png">
+                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="selected" image="icon_choose.png"/>
+                    <connections>
+                        <action selector="checkAllBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="N5c-ZY-fKW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJk-Lu-dwT">
+                    <rect key="frame" x="197" y="17" width="23" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.48265113059999998" blue="0.05722090639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRj-pg-OrJ">
+                    <rect key="frame" x="244" y="10" width="100" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.48265113061538112" blue="0.057220906392693172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="rl9-CK-wUk"/>
+                        <constraint firstAttribute="width" constant="100" id="yeZ-Kx-SBN"/>
+                    </constraints>
+                    <state key="normal" title="结算（0）">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="settleAccountsBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="yVA-4J-Qgb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlz-Kw-gul">
+                    <rect key="frame" x="153" y="17" width="29" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="T5h-al-Ue4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="0iI-eD-o9G"/>
+                <constraint firstItem="TRj-pg-OrJ" firstAttribute="leading" secondItem="aJk-Lu-dwT" secondAttribute="trailing" constant="24" id="3fa-IH-DJf"/>
+                <constraint firstItem="aJk-Lu-dwT" firstAttribute="leading" secondItem="jlz-Kw-gul" secondAttribute="trailing" constant="15" id="57r-qv-mcv"/>
+                <constraint firstItem="aJk-Lu-dwT" firstAttribute="centerY" secondItem="TRj-pg-OrJ" secondAttribute="centerY" id="E7C-HF-9oD"/>
+                <constraint firstItem="TRj-pg-OrJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PIE-VW-iz0"/>
+                <constraint firstItem="T5h-al-Ue4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="U0l-a3-0nd"/>
+                <constraint firstItem="jlz-Kw-gul" firstAttribute="centerY" secondItem="aJk-Lu-dwT" secondAttribute="centerY" id="UKT-Q0-gpq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TRj-pg-OrJ" secondAttribute="trailing" constant="15" id="u80-pz-fGn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="checkAllBtn" destination="T5h-al-Ue4" id="0hy-FG-muf"/>
+                <outlet property="priceLabel" destination="aJk-Lu-dwT" id="EU5-qh-A2a"/>
+                <outlet property="settleAccountsBtn" destination="TRj-pg-OrJ" id="LSS-si-2bm"/>
+            </connections>
+            <point key="canvasLocation" x="-114.5" y="-448"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_choose.png" width="17" height="17"/>
+        <image name="icon_unselect.png" width="19" height="19"/>
+    </resources>
+</document>

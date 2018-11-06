@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "价格"; ObjectID = "Hjz-lY-3bU"; */
+"Hjz-lY-3bU.text" = "价格";
+
+/* Class = "UILabel"; text = "标题"; ObjectID = "X88-rB-FQ5"; */
+"X88-rB-FQ5.text" = "标题";
+
+/* Class = "UIButton"; normalTitle = "立即购买"; ObjectID = "lfh-vP-JrZ"; */
+"lfh-vP-JrZ.normalTitle" = "Buy now";

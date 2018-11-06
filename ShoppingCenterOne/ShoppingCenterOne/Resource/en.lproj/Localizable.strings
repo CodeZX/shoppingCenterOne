@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  ShoppingCenterOne
+
+  Created by 周鑫 on 2018/11/2.
+  Copyright © 2018年 TJ. All rights reserved.
+*/
+
+
+"nav-login" = "log in";
+
+
+// tabbar
+"Tabar_Home_Title" = "Home";
+"Tabar_shoppingCart_Title" = "shoppingCart";
+"Tabar_Mine_Title" = "Mine";
+
+
+// 首页分类
+"SnackFood" = "SnackFood"; //休闲零食";
+"driedFruit" = "DriedFruit";//炒货干果";
+"biscuit" = "BiscuitCake";//饼干糕点";
+"import" = "ImportFood";//进口食品";
+
+
+// controller title
+"goodsdetailsController_title" = "goodsDetails";
+"confirmOrderController_title" = "confirmOrder";
+"selectAddressController_title" = "selectAddress";
+"manageController_title" = "manageAddress";
+"editController_title" = "editAddress";
+"addController_title" = "addAddress";
+
+
+// 个人中心
+"message" = "Message";
+"myOrder" = "myOrder";
+"myCollect" = "myCollect";
+"about" = "about";
+"language" = "language";
+"setting" = "setting";
+"intimacy" = "intimacy";
+
+
+"pop" = "popGoods";
+"commend" = "commendGoods";
+"more" = "more";
+"phone" = "phone";
+"shoppingCart" = "shoppingCart";
+"accedeToshoppingCart" = "accedeToshoppingCart";
+"buy" = "Buy";
+"payment" = "payment";
+"addUp" = "addUp";
+"manage" = "manage";
+"checkAll" = "checkAll";
+"settleAccounts" = "settleAccounts";
+
+
+"select" = "select";
+"select_size" = "select size";
+"parameter" = "parameter";
+"parameterSelect" = "parameterSelect";
+"addAddressButtonTitle" = "addAddress";
