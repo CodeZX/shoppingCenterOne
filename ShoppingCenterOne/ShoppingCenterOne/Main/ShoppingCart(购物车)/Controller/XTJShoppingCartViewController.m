@@ -59,6 +59,7 @@
    
     
     XTJAggregateBar *aggregateBar = [XTJAggregateBar aggregateBar];
+    aggregateBar.hidden = YES;
     aggregateBar.delegate = self;
 //    aggregateBar.backgroundColor = [UIColor redColor];
     [self.view addSubview:aggregateBar];
@@ -103,6 +104,7 @@
          [MBProgressHUD hideHUD];
          if ([response.responseObject[@"code"] isEqualToString:@"0"]) {
              self.goodsModelArray = [XTJGoodsModel mj_objectArrayWithKeyValuesArray:response.responseObject[@"retData"]];
+             self.aggregateBar.hidden = !self.goodsModelArray.count;
              [self.tableView reloadData];
              [self.aggregateBar setcheckAllBtnSelect:NO];
              

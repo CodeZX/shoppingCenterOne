@@ -29,6 +29,7 @@
 @property (nonatomic,strong) NSMutableArray *categoryArray;
 @property (nonatomic,strong) NSMutableArray *bannerArray;
 @property (nonatomic,weak) STHomeHeadView *headView;
+@property (nonatomic,strong) UIView *tapView;
 @end
 
 static NSString *code = @"1";
@@ -88,7 +89,7 @@ static NSString *collectionViewTitleIdentifier = @"collectionVieTitle";
     [self.collectionView.mj_header endRefreshing];
     __weak typeof(self) weakSelf = self;
     
-    [MBProgressHUD showMessage:[NSString TJ_localizableZHNsstring:@"加载中.." enString:@"loading..."]];
+//    [MBProgressHUD showMessage:[NSString TJ_localizableZHNsstring:@"加载中.." enString:@"loading..."]];
     
     [[UIApplication sharedApplication] jk_beganNetworkActivity];
     // 商品
@@ -210,6 +211,32 @@ static NSString *collectionViewTitleIdentifier = @"collectionVieTitle";
     
 }
 
+
+#pragma mark -------------------------- searchBar delegate ----------------------------------------
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {
+    
+    TJLog(@"结束编辑");
+    
+   
+    
+    return YES;
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+    
+    TJLog(@"开始编辑");
+    
+    [self.view addSubview:self.tapView];
+
+    return YES;
+}
+- (void)tap:(UITapGestureRecognizer* )tap {
+    TJLog(@"取消第一响应者");
+    [self.tapView removeFromSuperview];
+    [self.searchBar resignFirstResponder];
+    
+}
+
 #pragma mark -------------------------- collectionView delegate ----------------------------------------
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
@@ -321,4 +348,16 @@ static NSString *collectionViewTitleIdentifier = @"collectionVieTitle";
 }
 
 
+
+#pragma mark -------------------------- lazy load ----------------------------------------
+- (UIView *)tapView {
+    if (!_tapView) {
+        _tapView = [[UIView alloc]initWithFrame:self.view.frame];
+        _tapView.backgroundColor  = [UIColor blackColor];
+        _tapView.alpha = 0.5;
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+        [_tapView addGestureRecognizer:tapGesture];
+    }
+    return _tapView;
+}
 @end

@@ -45,7 +45,7 @@
 - (void)loadNewData {
     
     [self.tableView.mj_header endRefreshing];
-    [self setupData];
+//    [self setupData];
 }
 
 - (void)setupData {
@@ -58,7 +58,7 @@
             [self.tableView reloadData];
         } else if ([response.responseObject[@"code"] isEqualToString:@"99"]) {
             [MBProgressHUD hideHUD];
-            [MBProgressHUD showSuccess:@"没有收藏的产品"];
+            [MBProgressHUD showSuccess:@"暂无消息"];
         }
     } failed:^(TJNetworkingFailureResponse * _Nonnull response) {
         

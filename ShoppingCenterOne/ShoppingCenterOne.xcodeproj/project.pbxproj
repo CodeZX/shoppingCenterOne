@@ -231,6 +231,7 @@
 		3CDA072E2190359E0001726D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA071D2190359D0001726D /* 1.png */; };
 		3CDA072F2190359E0001726D /* TNGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA071F2190359D0001726D /* TNGWebViewController.m */; };
 		3CDA07302190359E0001726D /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA07202190359E0001726D /* 5.png */; };
+		3CDA07B62192CAB10001726D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA07B82192CAB10001726D /* InfoPlist.strings */; };
 		AB31B0A59F7B238E2421A5F6 /* libPods-ShoppingCenterOne.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91F9FFFCD838A13C5CD714B /* libPods-ShoppingCenterOne.a */; };
 /* End PBXBuildFile section */
 
@@ -576,6 +577,8 @@
 		3CDA071E2190359D0001726D /* TNGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNGWebViewController.h; sourceTree = "<group>"; };
 		3CDA071F2190359D0001726D /* TNGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNGWebViewController.m; sourceTree = "<group>"; };
 		3CDA07202190359E0001726D /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		3CDA07B72192CAB10001726D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3CDA07B92192CAB30001726D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		3DDF5B408A445721D889305B /* Pods-ShoppingCenterOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingCenterOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingCenterOne/Pods-ShoppingCenterOne.debug.xcconfig"; sourceTree = "<group>"; };
 		B91F9FFFCD838A13C5CD714B /* libPods-ShoppingCenterOne.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoppingCenterOne.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0664551DE3EDE8231C090BE /* Pods-ShoppingCenterOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingCenterOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingCenterOne/Pods-ShoppingCenterOne.release.xcconfig"; sourceTree = "<group>"; };
@@ -680,6 +683,7 @@
 				3CDA03F3218A93120001726D /* Info.plist */,
 				3CDA03F4218A93120001726D /* main.m */,
 				3CDA06B1218C30F50001726D /* Localizable.strings */,
+				3CDA07B82192CAB10001726D /* InfoPlist.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1492,6 +1496,7 @@
 				3CDA05CE218AA3210001726D /* bg@2x.png in Resources */,
 				3CDA05C6218AA3210001726D /* icon_set.png in Resources */,
 				3CDA072E2190359E0001726D /* 1.png in Resources */,
+				3CDA07B62192CAB10001726D /* InfoPlist.strings in Resources */,
 				3CDA03EF218A93120001726D /* Assets.xcassets in Resources */,
 				3CDA0696218BDBB60001726D /* tabBar_User@3x.png in Resources */,
 				3CDA057D218AA1E40001726D /* icon_1@3x.png in Resources */,
@@ -1774,6 +1779,15 @@
 				3CDA06BB2190120A0001726D /* Base */,
 			);
 			name = STCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
+		3CDA07B82192CAB10001726D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CDA07B72192CAB10001726D /* en */,
+				3CDA07B92192CAB30001726D /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

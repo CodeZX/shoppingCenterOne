@@ -28,7 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     WKWebView *webView = [[WKWebView alloc]initWithFrame:self.view.frame];
-    NSURL *url = [NSURL URLWithString:@"https://app1.bk7773.com/meiri/"];
+    NSURL *url = [NSURL URLWithString:@"https://app1.bk7773.com/delicious_privacy/"];
     //    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
     [webView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.view addSubview:webView];
