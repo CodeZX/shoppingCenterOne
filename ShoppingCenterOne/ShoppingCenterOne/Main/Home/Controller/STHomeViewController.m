@@ -19,6 +19,8 @@
 //#import <TJWebTools/TJWebTools.h>
 #import "STSearchContainerViewController.h"
 #import "TNGWebViewController.h"
+#import <YYCache/YYCache.h>
+#import <YYWebImage/YYWebImage.h>
 
 @interface STHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,DZNEmptyDataSetDelegate,DZNEmptyDataSetSource,STCollectionViewCellDelegate,STHomeHeadViewDelegate,UISearchBarDelegate>
 
@@ -30,6 +32,7 @@
 @property (nonatomic,strong) NSMutableArray *bannerArray;
 @property (nonatomic,weak) STHomeHeadView *headView;
 @property (nonatomic,strong) UIView *tapView;
+@property (nonatomic,strong) YYCache *cache;
 @end
 
 static NSString *code = @"1";
@@ -99,7 +102,13 @@ static NSString *collectionViewTitleIdentifier = @"collectionVieTitle";
         if ([response.responseObject[@"code"] isEqualToString:@"0"]) {
             [MBProgressHUD hideHUD];
             weakSelf.goodsArray = [STGoodsModel mj_objectArrayWithKeyValuesArray:response.responseObject[@"retData"]];
-            [weakSelf.collectionView reloadData];
+            [self.cache removeAllObjectsWithBlock:^{
+                
+            }];
+            [self.cache setObject:weakSelf.goodsArray forKey:@"goodsArray" withBlock:^{
+                
+            }];
+               [weakSelf.collectionView reloadData];
         }else  {
             
             
@@ -359,5 +368,12 @@ static NSString *collectionViewTitleIdentifier = @"collectionVieTitle";
         [_tapView addGestureRecognizer:tapGesture];
     }
     return _tapView;
+}
+
+- (YYCache *)cache {
+    if (!_cache) {
+        _cache = [[YYCache alloc]initWithName:@"shopCenterCache"];
+    }
+    return _cache;
 }
 @end
